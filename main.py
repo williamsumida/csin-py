@@ -9,7 +9,7 @@ from championship import Championship
 
 def get_players():
     players = [ 
-                
+
                 '1',
                 '2',
                 '3',

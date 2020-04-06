@@ -25,7 +25,7 @@ class Championship:
                 team.set_player(players.pop())
             self.teams.append(team)
             number_of_teams = number_of_teams + 1
-
+        return self.teams
     
     def get_bound_values(self, teams_count):
         power_of_2_numbers = [2, 4, 8, 16, 32, 64]
