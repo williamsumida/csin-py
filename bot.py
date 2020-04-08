@@ -81,7 +81,7 @@ def get_5v5_channels(voice_channels):
 
 def sort_5v5_teams(members):
     random.shuffle(members)
-    team_1_count = len(members)/2
+    team_1_count = int(len(members)/2)
     team_1 = []
     team_2 = []
     while members:
