@@ -5,8 +5,8 @@ csin is a Discord BOT developed in Python to create teams or small tournaments u
 ## Features
 
 - [x] Implement wingman teams
-- [ ] Implement 5v5 teams
-- [ ] Implement MxN teams
+- [x] Implement 5v5 teams
+- [x] Implement MxN teams
 - [ ] Implement wingman tournaments
 
 ## Usage in Discord
