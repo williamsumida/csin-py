@@ -1,0 +1,24 @@
+<Message id=697354212434116660 
+channel=<TextChannel 
+id=477622903287054339 
+name='general' 
+position=0 
+nsfw=False 
+news=False 
+category_id=477622903287054338> 
+type=<MessageType.default: 0> 
+
+author
+	Member id=199638703528738816 
+	name='williamsumida' 
+	discriminator='7325' 
+	bot=False 
+	nick=None 
+guild 
+	id=477622903287054337 
+	name='bot tests' 
+	shard_id=None 
+	chunked=True 
+	member_count=3
+
+
