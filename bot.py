@@ -59,15 +59,12 @@ async def create_5v5(ctx):
             members_in_current_channel = channel.members
     
     team_1, team_2 = sort_5v5_teams(members_in_current_channel)
-
     if team_1:
         for player in team_1:
             await player.move_to(voice_channel_1)
-
     if team_2:
         for player in team_2:
             await player.move_to(voice_channel_2)
-
 
 def get_5v5_channels(voice_channels):
     voice_channel_1 = None
@@ -90,6 +87,7 @@ def sort_5v5_teams(members):
     while members:
         if team_1_count != 0:
             team_1.append(members.pop())
+            team_1_count-=1
         else:
             team_2.append(members.pop())
 
