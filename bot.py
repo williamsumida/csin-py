@@ -66,6 +66,15 @@ async def create_5v5(ctx):
         for player in team_2:
             await player.move_to(voice_channel_2)
 
+
+@bot.command(name='despatifaria')
+async def move_players_from_teams_to_main_channel(ctx):
+    voice_channels = ctx.guild.voice_channels
+    voice_channel_1, voice_channel_2 = get_5v5_channels(voice_channels)
+
+    
+
+
 def get_5v5_channels(voice_channels):
     voice_channel_1 = None
     voice_channel_2 = None
@@ -82,16 +91,10 @@ def get_5v5_channels(voice_channels):
 def sort_5v5_teams(members):
     random.shuffle(members)
     team_1_count = int(len(members)/2)
-    team_1 = []
-    team_2 = []
-    while members:
-        if team_1_count != 0:
-            team_1.append(members.pop())
-            team_1_count-=1
-        else:
-            team_2.append(members.pop())
-
+    team_1 = members[:len(members)//2]
+    team_2 = members[len(members)//2:]
     return team_1, team_2
+
 
 def format_teams_message(teams):
     final_message = '9? 99? 999?\n'
