@@ -70,9 +70,23 @@ async def create_5v5(ctx):
 @bot.command(name='despatifaria')
 async def move_players_from_teams_to_main_channel(ctx):
     voice_channels = ctx.guild.voice_channels
-    voice_channel_1, voice_channel_2 = get_5v5_channels(voice_channels)
-
     
+    lobby_channel = get_lobby_channel(voice_channels)
+    voice_channel_1, voice_channel_2 = get_5v5_channels(voice_channels)
+    
+    for member in voice_channel_1.members:
+        await member.move_to(lobby_channel)
+
+    for member in voice_channel_2.members:
+        await member.move_to(lobby_channel)
+
+
+def get_lobby_channel(voice_channels):
+    channel_name='Lobby'  
+    for channel in voice_channels:
+        if channel.name == channel_name:
+            return channel
+    return channel[0]
 
 
 def get_5v5_channels(voice_channels):
