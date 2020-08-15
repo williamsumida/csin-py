@@ -1,6 +1,6 @@
 # csin
 
-csin is a Discord BOT developed in Python to create teams or small tournaments using commands in the chat.
+csin is a Open Source Discord BOT developed in Python to create teams or small tournaments using commands in the chat.
 
 ## Features
 
