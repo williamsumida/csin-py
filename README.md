@@ -8,7 +8,8 @@ csin is a Open Source Discord BOT developed in Python to create teams or small t
 - [x] Implement 5v5 teams
 - [x] Implement MxN teams
 - [ ] Implement wingman tournaments
-
+- [ ] Implement "frases desmotivacionais" (bom dia)
+- [ ] 
 ## Usage in Discord
 
 ### create wingman teams
