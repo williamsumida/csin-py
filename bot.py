@@ -12,8 +12,10 @@ load_dotenv()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 COMMAND_CREATE_WINGMAN_TEAMS='create wingman teams'
+intents = discord.Intents.default()
+intents.members = True
+bot = commands.Bot(command_prefix='!', intents=intents)
 
-bot = commands.Bot(command_prefix='!')
 
 
 @bot.command(name='ajuda')
@@ -50,15 +52,18 @@ async def create_5v5(ctx):
     team_1 = []
     team_2 = []
     author = ctx.author
-    
+    pp.pprint(author)    
     voice_channels = ctx.guild.voice_channels
     voice_channel_1, voice_channel_2 = get_5v5_channels(voice_channels)
 
     for channel in voice_channels:
+        pp.pprint(channel.name)
+
         if author in channel.members:
             members_in_current_channel = channel.members
-    
+    pp.pprint(members_in_current_channel) 
     team_1, team_2 = sort_5v5_teams(members_in_current_channel)
+
     if team_1:
         for player in team_1:
             await player.move_to(voice_channel_1)
